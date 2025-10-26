@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAPHIC LAND</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <link rel="icon" href="frontend/images/logo graphicland.jpg" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-90 border-b border-red-900">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold neon-text">GRAPHIC <span class="text-red-500">LAND</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-red-500 transition duration-300">Accueil</a>
+                <a href="#about" class="text-white hover:text-red-500 transition duration-300">À Propos</a>
+                <a href="#services" class="text-white hover:text-red-500 transition duration-300">Services</a>
+                <a href="#partners" class="text-white hover:text-red-500 transition duration-300">Partenaires</a>
+                <a href="#testimonials" class="text-white hover:text-red-500 transition duration-300">Avis</a>
+                <a href="#contact" class="text-white hover:text-red-500 transition duration-300">Contact</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section id="home" class="section relative h-screen flex items-center justify-center">
+    <!-- Background Image with darker overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="frontend/images/acceuil.jpg" alt="Graphic Land Background" 
+            class="w-full h-full object-cover brightness-[0.2]">
+        <!-- Darker overlay -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+    
+    <!-- Vanta.js Effect with reduced opacity -->
+    <div id="vanta-bg" class="absolute inset-0 z-10 opacity-30"></div>
+    
+    <!-- Content with increased contrast -->
+    <div class="container mx-auto px-4 text-center relative z-20">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 neon-text drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]">
+        Illuminez votre image avec <span class="text-red-500">GRAPHIC LAND</span>
+    </h1>
+    <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-100">
+        Agence de publicité & communication — impression, web, digital et design sur mesure.
+    </p>
+    <a href="#contact" 
+       class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full neon-glow transform hover:scale-105 transition duration-300">
+        Demandez un devis
+    </a>
+</div>
+</section>
+    <!-- Hero Section 
+    <section id="home" class="section flex items-center justify-center bg-pattern">
+        <div id="vanta-bg"></div>
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 neon-text">Illuminez votre image avec <span class="text-red-500">GRAPHIC LAND</span></h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Agence de publicité & communication — impression, web, digital et design sur mesure.</p>
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full neon-glow transform hover:scale-105 transition duration-300">
+                Demandez un devis
+            </button>
+        </div>
+    </section>-->
+
+    <!-- About Section -->
+    <section id="about" class="section bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-16 text-center neon-text scroll-animate">À Propos de Nous</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate">
+                    <h3 class="text-2xl font-bold mb-4 text-red-500">Notre Histoire</h3>
+                    <p class="mb-6 text-gray-300">Fondée en 2014, GRAPHIC LAND est née de la passion pour le design innovant et la communication impactante. Nous avons grandi avec une vision claire : redéfinir les standards de la publicité moderne.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-red-500">Notre Mission</h3>
+                    <p class="mb-6 text-gray-300">Transformer vos idées en réalités visuelles percutantes. Nous combinons créativité, technologie et stratégie pour donner vie à votre image de marque.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-red-500">Notre Vision</h3>
+                    <p class="text-gray-300">Devenir le leader incontesté de la communication visuelle innovante en Europe, en repoussant constamment les limites du design et de la technologie.</p>
+                </div>
+                <div class="relative scroll-animate">
+                    <div class="bg-gray-900 p-1 neon-border rounded-lg">
+                        <img src="frontend/images/logo graphicland.jpg" alt="Équipe GRAPHIC LAND" class="w-full h-auto rounded-lg">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-red-600 text-white px-4 py-2 rounded-full neon-glow">
+                        <span>Depuis 2014</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-gray-900 bg-opacity-80">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-16 text-center neon-text scroll-animate">Nos Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg hover:neon-glow transition duration-500 scroll-animate">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="printer" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Impression tous formats</h3>
+                    <p class="text-gray-400">Flyers, cartes de visite, affiches, brochures, bannières - qualité premium avec finitions élégantes.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg hover:neon-glow transition duration-500 scroll-animate">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="box" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Panneaux publicitaires</h3>
+                    <p class="text-gray-400">Création et pose d'enseignes lumineuses et panneaux publicitaires hautement visibles et durables.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg hover:neon-glow transition duration-500 scroll-animate">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="gift" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Personnalisation</h3>
+                    <p class="text-gray-400">Objets promotionnels uniques : textiles, mugs, autocollants personnalisés pour votre marque.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg hover:neon-glow transition duration-500 scroll-animate">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="share-2" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Publicité digitale</h3>
+                    <p class="text-gray-400">Stratégies social media percutantes sur Facebook, Instagram et TikTok pour maximiser votre visibilité.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg hover:neon-glow transition duration-500 scroll-animate">
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="pen-tool" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design graphique</h3>
+                    <p class="text-gray-400">Logos, chartes graphiques et visuels publicitaires uniques qui captivent votre audience.</p>
+                </div>
+                
+                <!-- Service 6 - Featured -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg hover:neon-glow transition duration-500 scroll-animate relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 bg-red-500 text-white px-4 py-2 transform rotate-45 translate-x-8 neon-glow">
+                        <span class="text-xs font-bold">POPULAIRE</span>
+                    </div>
+                    <div class="text-red-500 mb-4">
+                        <i data-feather="globe" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Création de sites web</h3>
+                    <p class="text-gray-400">Vitrines, sites professionnels sur mesure, optimisés pour le référencement et la conversion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section 
+    <section id="partners" class="section bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-16 text-center neon-text scroll-animate">Nos Partenaires</h2>
+            <div class="flex flex-wrap justify-center items-center gap-12 scroll-animate">
+                <img src="frontend/images/bougainvilliers.jpg" alt="Partenaire 1" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/logo boston.jpg" alt="Partenaire 2" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/logo hadid.png" alt="Partenaire 3" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/logo original.jpg" alt="Partenaire 4" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/logo priba.png" alt="Partenaire 5" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/logo tacos.jpg" alt="Partenaire 6" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/logo titanic.png" alt="Partenaire 7" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/logohmmarket.jpg" alt="Partenaire 8" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/perla logo.png" alt="Partenaire 9" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/pink studio.png" alt="Partenaire 10" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+                <img src="frontend/images/sup sadoudi.jpg" alt="Partenaire 11" class="h-16 opacity-70 hover:opacity-100 hover:neon-glow transition duration-300">
+            </div>
+        </div>
+    </section>-->
+
+
+    <!-- Partners Section -->
+    <section id="partners" class="section bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center neon-text scroll-animate">
+                <span class="partners-header">Nos Partenaires</span>
+            </h2>
+
+            <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto scroll-animate">Des collaborations solides avec des marques locales et nationales — voici quelques-uns de nos partenaires.</p>
+
+            <div class="partners-grid scroll-animate">
+                <div class="partner-card" aria-label="Bougainvilliers">
+                    <img src="frontend/images/bougainvilliers.jpg" alt="Bougainvilliers">
+                </div>
+                <div class="partner-card" aria-label="Boston">
+                    <img src="frontend/images/logo boston.jpg" alt="Boston">
+                </div>
+                <div class="partner-card" aria-label="Hadid">
+                    <img src="frontend/images/logo hadid.png" alt="Hadid">
+                </div>
+                <div class="partner-card" aria-label="Original">
+                    <img src="frontend/images/logo original.jpg" alt="Original">
+                </div>
+                <div class="partner-card" aria-label="Priba">
+                    <img src="frontend/images/logo priba.png" alt="Priba">
+                </div>
+                <div class="partner-card" aria-label="Tacos">
+                    <img src="frontend/images/logo tacos.jpg" alt="Tacos">
+                </div>
+                <div class="partner-card" aria-label="Titanic">
+                    <img src="frontend/images/logo titanic.png" alt="Titanic">
+                </div>
+                <div class="partner-card" aria-label="HMMarket">
+                    <img src="frontend/images/logohmmarket.jpg" alt="HMMarket">
+                </div>
+                <div class="partner-card" aria-label="Perla">
+                    <img src="frontend/images/perla logo.png" alt="Perla">
+                </div>
+                <div class="partner-card" aria-label="Pink Studio">
+                    <img src="frontend/images/pink studio.png" alt="Pink Studio">
+                </div>
+                <div class="partner-card" aria-label="Sup Sadoudi">
+                    <img src="frontend/images/sup sadoudi.jpg" alt="Sup Sadoudi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+     <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-2 text-center neon-text scroll-animate">Ils nous font confiance</h2>
+            <p class="text-center text-gray-400 mb-6 max-w-2xl mx-auto scroll-animate">Découvrez les retours d'expérience de nos clients — captures d'écran réelles affichées ci‑dessous. Glissez ou utilisez les flèches pour naviguer.</p>
+
+            <div class="testimonials-carousel scroll-animate" aria-roledescription="carousel">
+                <div class="tc-viewport" id="tcViewport" aria-hidden="false">
+                    <div class="tc-track" id="tcTrack">
+                        <div class="tc-slide" role="group" aria-roledescription="slide" aria-label="1 / 4">
+                            <img src="frontend/images/7002.jpg" alt="Avis client 1">
+                        </div>
+                        <div class="tc-slide" role="group" aria-roledescription="slide" aria-label="2 / 4">
+                            <img src="frontend/images/7003.jpg" alt="Avis client 2">
+                        </div>
+                        <div class="tc-slide" role="group" aria-roledescription="slide" aria-label="3 / 4">
+                            <img src="frontend/images/7004.jpg" alt="Avis client 3">
+                        </div>
+                        <div class="tc-slide" role="group" aria-roledescription="slide" aria-label="4 / 4">
+                            <img src="frontend/images/7005.jpg" alt="Avis client 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-btn left" id="tcPrev" aria-label="Précédent">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="carousel-btn right" id="tcNext" aria-label="Suivant">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+
+                <!-- Dots -->
+                <div class="tc-dots" id="tcDots" role="tablist" aria-label="Navigation des slides"></div>
+            </div>
+        </div>
+    </section>
+     
+<!--contact section-->
+   <section id="contact" class="section bg-gray-900 bg-opacity-80">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-16 text-center neon-text scroll-animate">Contactez-nous</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="scroll-animate">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold mb-6 text-red-500">Contactez-nous directement</h3>
+                    
+                    <!-- WhatsApp -->
+<a href="https://wa.me/213561639156" target="_blank" 
+    class="flex items-center justify-center w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg neon-glow transition duration-300 border border-red-500">
+    <i data-feather="message-circle" class="mr-3"></i>
+    WhatsApp (+213 561 639 156)
+</a>
+
+<!-- Instagram -->
+<a href="https://www.instagram.com/graphic._land_azazga" target="_blank"
+    class="flex items-center justify-center w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg neon-glow transition duration-300 border border-red-500">
+    <i data-feather="instagram" class="mr-3"></i>
+    Instagram (@graphic._land_azazga)
+</a>
+
+<!-- Facebook -->
+<a href="https://www.facebook.com/share/14Dod13M8zn/" target="_blank"
+    class="flex items-center justify-center w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg neon-glow transition duration-300 border border-red-500">
+    <i data-feather="facebook" class="mr-3"></i>
+    Facebook (Graphic Land Azazga)
+</a>
+
+<!-- Email -->
+<a href="mailto:aouchetak@gmail.com" 
+    class="flex items-center justify-center w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg neon-glow transition duration-300 border border-red-500">
+    <i data-feather="mail" class="mr-3"></i>
+    Email (aouchetak@gmail.com)
+</a>
+                </div>
+            </div>
+
+            <div class="scroll-animate">
+                <div class="bg-gray-800 p-8 rounded-lg neon-border h-full">
+                    <h3 class="text-2xl font-bold mb-6 text-red-500">Nos Coordonnées</h3>
+                    <div class="space-y-6">
+                        <!-- Adresse -->
+                        <div class="flex items-start">
+                            <div class="text-red-500 mr-4 mt-1">
+                                <i data-feather="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Adresse</h4>
+                                <p class="text-gray-400">les arrets de Sademi, AZAZGA</p>
+                                <p class="text-gray-400">Tizi Ouzou, Algérie</p>
+                                <a href="https://www.google.com/maps/place/Graphic+Land/@36.7422159,4.3720559,698m/" 
+                                   target="_blank" 
+                                   class="text-red-500 text-sm hover:underline mt-2 inline-block">
+                                    Voir sur Google Maps →
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div class="flex items-start">
+                            <div class="text-red-500 mr-4 mt-1">
+                                <i data-feather="phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Téléphone</h4>
+                                <p class="text-gray-400">+213 561 639 156</p>
+                            </div>
+                        </div>
+
+                        <!-- Horaires -->
+                        <div class="flex items-start">
+                            <div class="text-red-500 mr-4 mt-1">
+                                <i data-feather="clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Horaires d'ouverture</h4>
+                                <p class="text-gray-400">Dimanche - Jeudi : 9h - 16h30</p>
+                                <p class="text-gray-400">Vendredi - Samedi : Fermé</p>
+                            </div>
+                        </div>
+
+                        <!-- Réseaux sociaux -->
+                        <div class="pt-6 border-t border-gray-700">
+                            <h4 class="font-bold mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.instagram.com/graphic._land_azazga/" 
+                                   class="text-gray-400 hover:text-red-500 transition duration-300">
+                                    <i data-feather="instagram" class="w-6 h-6"></i>
+                                </a>
+                                <a href="https://www.facebook.com/share/14Dod13M8zn/" 
+                                   class="text-gray-400 hover:text-red-500 transition duration-300">
+                                    <i data-feather="facebook" class="w-6 h-6"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@aoucehta_kamel" 
+                                   class="text-gray-400 hover:text-red-500 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="w-5 h-5">
+                                    <path d="M24.5 7.5c-1.3 0-2.5-1.2-2.5-2.5V2h-4v18.5c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4c.3 0 .7 0 1 .1V13c-.3 0-.7-.1-1-.1-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8V9.5c.7.3 1.5.5 2.5.5V7.5z"/>
+                                  </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 neon-text">GRAPHIC <span class="text-red-500">LAND</span></h3>
+                    <p class="text-gray-400">L'agence de communication qui donne vie à vos idées avec une touche futuriste et élégante.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">Impression</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">Publicité digitale</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">Design graphique</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">Développement web</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-white">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-red-500 transition duration-300">Accueil</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-red-500 transition duration-300">À Propos</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-red-500 transition duration-300">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-red-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <!--<div>
+                    <h4 class="font-bold mb-4 text-white">Légal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">Mentions légales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">CGV</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition duration-300">Cookies</a></li>
+                    </ul>
+                </div>-->
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2025 GRAPHIC LAND. Tous droits réservés.</p><br>Graphicland X Degitalina
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

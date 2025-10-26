@@ -1,0 +1,203 @@
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --neon-red: #ff1a1a;
+            --deep-black: #000000;
+            --pure-white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--deep-black);
+            color: var(--pure-white);
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red);
+        }
+        
+        .neon-glow {
+            box-shadow: 0 0 15px var(--neon-red);
+        }
+        
+        .neon-border {
+            border: 2px solid var(--neon-red);
+            box-shadow: 0 0 10px var(--neon-red), inset 0 0 10px var(--neon-red);
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 5rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bg-pattern {
+            background-image: radial-gradient(circle, rgba(255, 26, 26, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px var(--neon-red);
+        }
+        
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* --- Neon partners gallery styles (ajout) --- */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .partners-grid { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+        }
+        @media (min-width: 1024px) {
+            .partners-grid { grid-template-columns: repeat(6, 1fr); gap: 1.5rem; }
+        }
+
+        .partner-card {
+            background: rgba(17,17,17,0.45);
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--neon-red);
+            box-shadow: 0 6px 26px rgba(255,26,26,0.08), 0 0 10px rgba(255,26,26,0.15);
+            transition: transform 260ms ease, box-shadow 260ms ease, filter 260ms ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .partner-card img {
+            max-height: 64px;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 18px 48px rgba(255,26,26,0.22), 0 0 32px rgba(255,26,26,0.55);
+            filter: drop-shadow(0 8px 20px rgba(255,26,26,0.28));
+        }
+
+        /* Optional small accent for the section header */
+        .partners-header {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border: 1px solid #ff1a1a;
+            border-radius: 999px;
+            box-shadow: 0 4px 18px rgba(255,26,26,0.06);
+            background: rgba(0,0,0,0.4);
+        }
+        /* Réduire l'espacement entre la section Partenaires et Testimonials */
+        #partners { padding-bottom: 1rem; }    /* ajuste l'espace sous Partenaires */
+        #testimonials { padding-top: 0.5rem; } /* ajuste l'espace au-dessus d'Avis */
+        #partners .container > .partners-grid { margin-top: 0.25rem; } /* resserre la grille si besoin */
+
+    /* Testimonials gallery styles */
+.testimonials-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .testimonials-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonials-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.gallery-item {
+    position: relative;
+    background: #000;
+    border-radius: 12px;
+    padding: 8px;
+    border: 2px solid #ff1a1a;
+    box-shadow: 0 0 15px rgba(255,26,26,0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255,26,26,0.4);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+ /* Testimonials carousel */
+        .testimonials-carousel { max-width:1100px; margin:0 auto; position:relative; padding:1rem 0; }
+        .tc-viewport { overflow:hidden; display:block; }
+        .tc-track { display:flex; gap:1rem; transition:transform .45s cubic-bezier(.22,.9,.3,1); will-change:transform; align-items:center; }
+        .tc-slide { flex: 0 0 auto; display:flex; align-items:center; justify-content:center; }
+        /* Let images keep their intrinsic aspect ratio and size to fit within viewport */
+        .tc-slide img { width: auto; max-width:100%; height: auto; border-radius:12px; border:2px solid rgba(255,26,26,0.06); box-shadow:0 12px 30px rgba(0,0,0,0.6); display:block; }
+
+        @media (max-width:1024px) {
+            .tc-slide img { max-height:420px; }
+        }
+        @media (max-width:640px) {
+            .tc-slide img { max-height:260px; border-radius:8px; }
+        }
+
+        .carousel-btn {
+            position:absolute; top:50%; transform:translateY(-50%);
+            width:44px; height:44px; border-radius:999px;
+            background:rgba(0,0,0,0.6); border:1px solid rgba(255,26,26,0.75);
+            color:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer;
+            backdrop-filter: blur(4px); z-index:30;
+        }
+        .carousel-btn svg { width:18px; height:18px; }
+        .carousel-btn.left { left:12px; }
+        .carousel-btn.right { right:12px; }
+
+        .tc-dots { display:flex; gap:.5rem; justify-content:center; margin-top:.85rem; }
+        .tc-dot { width:10px; height:10px; border-radius:999px; background:rgba(255,255,255,0.15); cursor:pointer; border:1px solid rgba(255,255,255,0.06); }
+        .tc-dot.active { background: #ff1a1a; box-shadow:0 0 10px rgba(255,26,26,0.6); transform:scale(1.15); }
+
+        /* Header spacing consistent */
+        #testimonials .container > h2 { margin-bottom:.5rem; }
