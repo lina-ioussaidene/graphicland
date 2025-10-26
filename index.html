@@ -7,12 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="icon" href="frontend/images/logo graphicland.jpg" type="image/png">
     <link rel="stylesheet" href="style.css">
+    
+
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-black bg-opacity-90 border-b border-red-900">
+    <!--<nav class="fixed w-full z-50 bg-black bg-opacity-90 border-b border-red-900">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <span class="text-2xl font-bold neon-text">GRAPHIC <span class="text-red-500">LAND</span></span>
@@ -24,12 +27,45 @@
                 <a href="#partners" class="text-white hover:text-red-500 transition duration-300">Partenaires</a>
                 <a href="#testimonials" class="text-white hover:text-red-500 transition duration-300">Avis</a>
                 <a href="#contact" class="text-white hover:text-red-500 transition duration-300">Contact</a>
-            </div>
-            <button class="md:hidden text-white">
-                <i data-feather="menu"></i>
-            </button>
-        </div>
-    </nav>
+            </div>-->
+            <!-- </div>
+    </nav>-->
+<!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90 border-b border-red-900">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <span class="text-2xl font-bold">
+          GRAPHIC <span class="text-red-500">LAND</span>
+        </span>
+      </div>
+
+      <!-- Menu desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-red-500 transition duration-300">Accueil</a>
+        <a href="#about" class="hover:text-red-500 transition duration-300">À Propos</a>
+        <a href="#services" class="hover:text-red-500 transition duration-300">Services</a>
+        <a href="#partners" class="hover:text-red-500 transition duration-300">Partenaires</a>
+        <a href="#testimonials" class="hover:text-red-500 transition duration-300">Avis</a>
+        <a href="#contact" class="hover:text-red-500 transition duration-300">Contact</a>
+      </div>
+
+      <!-- Bouton hamburger (mobile) -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Ouvrir le menu">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 px-4 pb-4 bg-black bg-opacity-95 border-t border-red-900">
+      <a href="#home" class="hover:text-red-500 transition duration-300">Accueil</a>
+      <a href="#about" class="hover:text-red-500 transition duration-300">À Propos</a>
+      <a href="#services" class="hover:text-red-500 transition duration-300">Services</a>
+      <a href="#partners" class="hover:text-red-500 transition duration-300">Partenaires</a>
+      <a href="#testimonials" class="hover:text-red-500 transition duration-300">Avis</a>
+      <a href="#contact" class="hover:text-red-500 transition duration-300">Contact</a>
+    </div>
+  </nav>
 
     <!-- Hero Section -->
 <section id="home" class="section relative h-screen flex items-center justify-center">
@@ -421,5 +457,21 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Active Feather icons
+    feather.replace();
+
+    // Toggle mobile menu
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
 </body>
 </html>

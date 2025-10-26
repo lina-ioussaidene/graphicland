@@ -17,6 +17,7 @@
             maxDistance: 22.00,
             spacing: 18.00
         });
+    
         
         // Scroll animation
         const scrollElements = document.querySelectorAll('.scroll-animate');
@@ -128,3 +129,20 @@
             // make sure images load before layout (optional)
             window.addEventListener('load', update);
         })();
+    //mobile 
+    document.addEventListener("DOMContentLoaded", () => {
+      // Active Feather
+      feather.replace();
+
+      // Toggle mobile menu
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    });
+
+
